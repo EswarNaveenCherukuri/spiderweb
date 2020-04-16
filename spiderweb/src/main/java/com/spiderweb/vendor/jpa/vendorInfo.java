@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name= "vendor_info")
 
-public class vendor_info {
+public class vendorInfo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int vendor_id;
