@@ -1,9 +1,10 @@
 package com.spiderweb.vendor.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 
-
-public interface ContractInfoRepository extends JpaRepository<ContractInfoRepository,Long>{
+@Repository
+public interface ContractInfoRepository extends JpaRepository<contractInfo,Long>{
 
 }

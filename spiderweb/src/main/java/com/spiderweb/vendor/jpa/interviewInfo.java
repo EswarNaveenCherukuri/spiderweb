@@ -13,6 +13,17 @@ public class interviewInfo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int inteview_id; 
+	private int contract_id; 
+	private String interview_datetime; 
+	private String interview_zone; 
+	private String interview_location; 
+	private String interview_type;
+	private String interview_status; 
+	private String submitted_date; 
+	private String submitted_by; 
+	private String update_date;
+	private String update_by;
+	
 	public int getInteview_id() {
 		return inteview_id;
 	}
@@ -79,14 +90,13 @@ public class interviewInfo {
 	public void setUpdate_by(String update_by) {
 		this.update_by = update_by;
 	}
-	private int contract_id; 
-	private String interview_datetime; 
-	private String interview_zone; 
-	private String interview_location; 
-	private String interview_type;
-	private String interview_status; 
-	private String submitted_date; 
-	private String submitted_by; 
-	private String update_date;
-	private String update_by;
+	@Override
+	public String toString() {
+		return "interviewInfo [inteview_id=" + inteview_id + ", contract_id=" + contract_id + ", interview_datetime="
+				+ interview_datetime + ", interview_zone=" + interview_zone + ", interview_location="
+				+ interview_location + ", interview_type=" + interview_type + ", interview_status=" + interview_status
+				+ ", submitted_date=" + submitted_date + ", submitted_by=" + submitted_by + ", update_date="
+				+ update_date + ", update_by=" + update_by + "]";
+	}
+	
 }

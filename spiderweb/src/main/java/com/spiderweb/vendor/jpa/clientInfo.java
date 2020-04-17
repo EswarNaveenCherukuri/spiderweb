@@ -12,19 +12,20 @@ import javax.persistence.Table;
 public class clientInfo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int client_id;  
+	private Long client_id;  
 	private String client_name;  
-	private int client_number;  
+	private Long client_number;  
 	private String client_city;  
 	private String client_state;   
 	private String client_zip_code; 
 	private String client_country; 
 	private String client_email_id; 
 	private String client_contact_person;
-	public int getClient_id() {
+	
+	public Long getClient_id() {
 		return client_id;
 	}
-	public void setClient_id(int client_id) {
+	public void setClient_id(Long client_id) {
 		this.client_id = client_id;
 	}
 	public String getClient_name() {
@@ -33,10 +34,10 @@ public class clientInfo {
 	public void setClient_name(String client_name) {
 		this.client_name = client_name;
 	}
-	public int getClient_number() {
+	public Long getClient_number() {
 		return client_number;
 	}
-	public void setClient_number(int client_number) {
+	public void setClient_number(Long client_number) {
 		this.client_number = client_number;
 	}
 	public String getClient_city() {
@@ -74,5 +75,15 @@ public class clientInfo {
 	}
 	public void setClient_contact_person(String client_contact_person) {
 		this.client_contact_person = client_contact_person;
+	}
+	@Override
+	public String toString() {
+		return "clientInfo [client_id=" + client_id + ", client_name=" + client_name + ", client_number="
+				+ client_number + ", client_city=" + client_city + ", client_state=" + client_state
+				+ ", client_zip_code=" + client_zip_code + ", client_country=" + client_country + ", client_email_id="
+				+ client_email_id + ", client_contact_person=" + client_contact_person + "]";
 	}  
+	
+	
+
 }

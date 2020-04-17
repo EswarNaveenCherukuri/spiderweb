@@ -1,5 +1,7 @@
 package com.spiderweb.vendor;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +9,10 @@ import com.spiderweb.vendor.jpa.ClientInfoRepository;
 import com.spiderweb.vendor.jpa.ContractInfoRepository;
 import com.spiderweb.vendor.jpa.InterviewInfoRepository;
 import com.spiderweb.vendor.jpa.VendorInfoRepository;
+import com.spiderweb.vendor.jpa.clientInfo;
+import com.spiderweb.vendor.jpa.contractInfo;
+import com.spiderweb.vendor.jpa.interviewInfo;
+import com.spiderweb.vendor.jpa.vendorInfo;
 
 @Service
 public class VendorServiceImpl implements VendorService {
@@ -24,23 +30,24 @@ public class VendorServiceImpl implements VendorService {
 	private VendorInfoRepository vendorInfoRepository;
 	
 	@Override
-	public void getVendorInfo() {
-		vendorInfoRepository.findAll();
+	public List<vendorInfo> getVendorInfo() {
+		return 	vendorInfoRepository.findAll();
+		
+
+	}
+	@Override
+	public List<contractInfo> getContractInfo() {
+	return 	contractInfoRepository.findAll();
 		
 	}
 	@Override
-	public void getClientInfo() {
-		clientInfoRepository.findAll();
+	public List<interviewInfo> getInterviewInfo() {
+		return interviewInfoRepository.findAll();
 		
 	}
 	@Override
-	public void getContractInfo() {
-		contractInfoRepository.findAll();
-		
-	}
-	@Override
-	public void getInterviewInfo() {
-		interviewInfoRepository.findAll();
+	public List<clientInfo> getClientInfo() {
+	return 	clientInfoRepository.findAll();
 		
 	}
 

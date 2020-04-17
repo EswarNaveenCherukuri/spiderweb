@@ -1,9 +1,10 @@
 package com.spiderweb.vendor.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 
-
-public interface InterviewInfoRepository extends JpaRepository<InterviewInfoRepository,Long>{
+@Repository
+public interface InterviewInfoRepository extends JpaRepository<interviewInfo,Long>{
 
 }

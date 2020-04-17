@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Table(name= "contract_info")
 
 public class contractInfo {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int contract_id; 
@@ -138,4 +139,14 @@ public class contractInfo {
 	public void setUpdate_by(String update_by) {
 		this.update_by = update_by;
 	} 
+	@Override
+	public String toString() {
+		return "contractInfo [contract_id=" + contract_id + ", vendor_id=" + vendor_id + ", client_id=" + client_id
+				+ ", candidate_id=" + candidate_id + ", job_title=" + job_title + ", job_skills=" + job_skills
+				+ ", rate_per_hour=" + rate_per_hour + ", type_of_contract=" + type_of_contract + ", no_of_years="
+				+ no_of_years + ", contract_start_date=" + contract_start_date + ", contract_end_date="
+				+ contract_end_date + ", project_start_date=" + project_start_date + ", project_end_date="
+				+ project_end_date + ", status=" + status + ", submitted_date=" + submitted_date + ", submitted_by="
+				+ submitted_by + ", update_date=" + update_date + ", update_by=" + update_by + "]";
+	}
 }

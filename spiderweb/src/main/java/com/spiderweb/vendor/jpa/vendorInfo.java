@@ -16,6 +16,12 @@ public class vendorInfo {
 	private int vendor_id;
 	private String vendor_name;
 	private int vendor_number; 
+	private String vendor_city; 
+	private String vendor_state;  
+	private String vendor_zip_code;  
+	private String vendor_country; 
+	private String vendor_email_id;
+	private String vendor_contact_person;
 	public int getVendor_id() {
 		return vendor_id;
 	}
@@ -70,10 +76,13 @@ public class vendorInfo {
 	public void setVendor_contact_person(String vendor_contact_person) {
 		this.vendor_contact_person = vendor_contact_person;
 	}
-	private String vendor_city; 
-	private String vendor_state;  
-	private String vendor_zip_code;  
-	private String vendor_country; 
-	private String vendor_email_id;
-	private String vendor_contact_person; 
+
+	@Override
+	public String toString() {
+		return "vendorInfo [vendor_id=" + vendor_id + ", vendor_name=" + vendor_name + ", vendor_number="
+				+ vendor_number + ", vendor_city=" + vendor_city + ", vendor_state=" + vendor_state
+				+ ", vendor_zip_code=" + vendor_zip_code + ", vendor_country=" + vendor_country + ", vendor_email_id="
+				+ vendor_email_id + ", vendor_contact_person=" + vendor_contact_person + "]";
+	} 
+	
 }
